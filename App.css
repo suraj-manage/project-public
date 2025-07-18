@@ -1,0 +1,137 @@
+/* Variables */
+:root {
+  --bg: #f5f7fa;
+  --panel: #ffffff;
+  --primary: #3467eb;
+  --text: #333;
+  --text-light: #555;
+  --border: #e0e0e0;
+  --shadow: rgba(0, 0, 0, 0.05);
+}
+
+/* Global */
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  transition: background 0.3s, color 0.3s;
+}
+
+/* Header */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: var(--panel);
+  border-bottom: 1px solid var(--border);
+  padding: 12px 24px;
+  box-shadow: 0 2px 4px var(--shadow);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.4rem;
+  color: var(--primary);
+  flex-grow: 1;
+}
+
+.layout-offset {
+  padding-top: 100px; /* Enough to clear the fixed header */
+  text-align: center;
+}
+header .searchBox {
+  width: 280px;
+}
+
+/* Layout */
+.container {
+  display: flex;
+  padding: 80px 24px 24px;
+  gap: 24px;
+}
+
+.sidebar {
+  width: 220px;
+  flex-shrink: 0;
+}
+
+.card {
+  background: var(--panel);
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 24px;
+  box-shadow: 0 4px 12px var(--shadow);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px var(--shadow);
+}
+
+.content-area {
+  flex: 1;
+}
+
+/* Buttons */
+.button-group {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.button {
+  background: var(--primary);
+  color: #fff;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.button:hover {
+  background: #2353c5;
+  transform: translateY(-1px);
+}
+
+/* Typography */
+.card h2 {
+  margin-top: 0;
+  margin-bottom: 12px;
+  font-size: 1.25rem;
+  color: var(--primary);
+}
+
+.card p,
+.card ul {
+  margin: 0 0 12px;
+  color: var(--text-light);
+  line-height: 1.5;
+}
+
+/* Ads */
+.ad-banner img {
+  width: 100%;
+  border-radius: 6px;
+  transition: transform 0.2s;
+}
+
+.ad-banner img:hover {
+  transform: scale(1.02);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 16px;
+  color: var(--text-light);
+  font-size: 0.85rem;
+  border-top: 1px solid var(--border);
+  margin-top: 24px;
+}
